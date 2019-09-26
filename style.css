@@ -2,19 +2,52 @@ body
 {
 	margin: 0;
 	padding: 0px 60px;
-	background-color: #29201B;
-	color: #efefef;
+	background-color: #EEEEEE;
+	color: #111111;
     font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
+    font-size: 24px;
 
 }
 
 h1
 {
-	font-size: 42px;
+	font-size: 64px;
 	font-weight: 400;
 	color: #FA7C00;
 	margin-bottom: 20px;
 	text-align: center;
 }
 
+label
+{
+	margin: auto;
+	padding:30px;
+}
+
+#registration
+{
+	margin: auto;
+	width:150px;
+	border-color: #bdc7d8;
+    border-radius: 5px;
+}
+
+#leg
+{
+	font-size: 64px;
+	font-weight: 400;
+	color: #FA7C00;
+
+	text-align: center;
+}
+
+.formInput
+{
+	font-size: 18px;
+    padding: 8px 10px;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+    margin: 10px;
+    width: 377px;
+	
+}
