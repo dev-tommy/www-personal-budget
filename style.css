@@ -26,6 +26,7 @@ label
 
 #registration
 {
+	background-color: #EDEDED;
 	margin: auto;
 	width:150px;
 	border-color: #bdc7d8;
@@ -47,7 +48,18 @@ label
     padding: 8px 10px;
     border-color: #bdc7d8;
     border-radius: 5px;
-    margin: 10px;
+	margin-bottom: 10px;
     width: 377px;
+}
+
+.button
+{
+	background-color: #AAFFAA;
+	font-size: 20px;
+    padding: 8px 10px;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+	margin-bottom: 10px;
+    width: 400px;
 	
 }
