@@ -26,18 +26,18 @@ label
 
 #registration
 {
-	background-color: #EDEDED;
+	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
 	margin: auto;
 	width:150px;
 	border-color: #bdc7d8;
     border-radius: 5px;
 }
 
-#leg
+#legend
 {
 	font-size: 64px;
 	font-weight: 400;
-	color: #FA7C00;
+	color: #b9001a;
 
 	text-align: center;
 }
@@ -54,7 +54,8 @@ label
 
 .button
 {
-	background-color: #AAFFAA;
+	background-color: #0b440b;
+	color: #BBFFBB;
 	font-size: 20px;
     padding: 8px 10px;
     border-color: #bdc7d8;
