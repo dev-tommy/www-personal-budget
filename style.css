@@ -24,7 +24,7 @@ label
 	padding:30px;
 }
 
-#registration
+fieldset
 {
 	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
 	margin: auto;
