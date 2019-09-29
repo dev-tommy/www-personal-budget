@@ -17,20 +17,25 @@
 </head>
 
 <body>
-
 	<header>
-		<h1> </h1>
+		<h1 class="logo">  Nowoczesny  budżet osobisty </h1>
+		<nav>
+			<ul class="menu">
+				<li class="menu-selected"><a href="#">Zarejestruj się</a></li>
+				<li><a href="login.html">Zaloguj się</a></li>
+			</ul>
+		</nav>
 	</header>
 	
 	<main>
-		<form action="register.php"  method="post">
+		<form action="login.html"  method="post">
 			<fieldset  id="registration">
 				<legend id="legend">Rejestracja:</legend>
 				<div>
-					<div><input type="text" class="formInput"  name="firstName" placeholder="Imię" maxlength="64" required></div>
-					<div><input type="email"  class="formInput" name="email" placeholder="Adres email" maxlength="64" required></div>
-					<div><input type="password"  class="formInput" name="password" placeholder="Hasło" minlength="8" maxlength="64" required></div>
-					<div><input type="password"  class="formInput" name="confirmPassword" placeholder="Potwierdź hasło" minlength="8" maxlength="64" required></div>
+					<div><input type="text" class="input-style"  name="firstName" placeholder="Imię" maxlength="64" required></div>
+					<div><input type="email"  class="input-style" name="email" placeholder="Adres email" maxlength="64" required></div>
+					<div><input type="password"  class="input-style" name="password" placeholder="Hasło" minlength="8" maxlength="64" required></div>
+					<div><input type="password"  class="input-style" name="confirmPassword" placeholder="Potwierdź hasło" minlength="8" maxlength="64" required></div>
 					<div><button class="button" type="submit">Zarejestruj się</button></div>
 				</div>
 			</fieldset>

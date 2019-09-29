@@ -9,13 +9,15 @@ body
 
 }
 
-h1
+h1.logo
 {
-	font-size: 64px;
-	font-weight: 400;
-	color: #FA7C00;
-	margin-bottom: 20px;
+	font-size: 48px;
+	font-weight: 700;
+	color: #408a33;
+	margin: 0;
 	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 
 label
@@ -31,6 +33,91 @@ fieldset
 	width:150px;
 	border-color: #bdc7d8;
     border-radius: 5px;
+	box-shadow: 10px 10px 9px -3px rgba(0,0,0,0.75);
+}
+
+option
+{
+	font-size: 14px;
+    padding: 8px 6%;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+	margin-bottom: 10px;
+    width: 100%;
+	color: black;
+}
+
+button
+{
+	background-color: #0b440b;
+	color: #BBFFBB;
+	font-size: 20px;
+    padding: 8px 10%;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+	margin-top: 16px;
+	margin-bottom: 10px;
+    width: 100%;
+}
+
+nav
+{
+	background-color: #1c74b2;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	font-size: 18px;
+	min-height: 40px;
+	line-height: 200%;
+}
+
+.menu > li
+{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 30px;
+	border-right: 1px dashed #0a2b42;
+}
+
+.menu > li:first-child
+{
+	border-left: 1px dashed #0a2b42;
+}
+
+.menu a
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.menu > li:hover
+{
+	background-color: #13086f;
+	border-color: #bdc7d8;
+
+}
+
+.menu-selected
+{
+	background-color: #13086f;
+	border-radius: 5px;
+	border-color: #bdc7d8;
+}
+
+
+#expense
+{
+	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
+	margin: auto;
+	width:500px;
+	border-color: #bdc7d8;
+    border-radius: 5px;
 }
 
 #legend
@@ -38,29 +125,46 @@ fieldset
 	font-size: 64px;
 	font-weight: 400;
 	color: #b9001a;
-
 	text-align: center;
+	margin-bottom: 12px;
 }
 
-.formInput
+.input-style
 {
 	font-size: 18px;
-    padding: 8px 10px;
+    padding: 8px 5%;
     border-color: #bdc7d8;
     border-radius: 5px;
 	margin-bottom: 10px;
-    width: 377px;
+    width: 90%;
+	resize: none;
 }
 
-.button
+.select-style
 {
-	background-color: #0b440b;
-	color: #BBFFBB;
-	font-size: 20px;
-    padding: 8px 10px;
+	font-size: 18px;
+    padding: 8px 4%;
     border-color: #bdc7d8;
     border-radius: 5px;
 	margin-bottom: 10px;
-    width: 400px;
-	
+    width: 100%;
 }
+
+.buttonAdd
+{
+	background-color: #0b440b;
+	width: 40%;
+	margin-right:9%;
+}
+
+.buttonCancel
+{
+	background-color: #840719;
+	width: 40%;
+	margin-left: 9%;
+}
+
+.disabledColor
+{
+	color: gray;
+}	
