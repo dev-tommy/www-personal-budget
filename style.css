@@ -2,7 +2,7 @@ body
 {
 	margin: 0;
 	padding: 0px 60px;
-	background-color: #EEEEEE;
+		background-color: #EEEEEE;
 	color: #111111;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
@@ -31,6 +31,16 @@ fieldset
 	width:150px;
 	border-color: #bdc7d8;
     border-radius: 5px;
+	box-shadow: 10px 10px 9px -3px rgba(0,0,0,0.75);
+}
+
+#expense
+{
+	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
+	margin: auto;
+	width:500px;
+	border-color: #bdc7d8;
+    border-radius: 5px;
 }
 
 #legend
@@ -38,29 +48,71 @@ fieldset
 	font-size: 64px;
 	font-weight: 400;
 	color: #b9001a;
-
 	text-align: center;
+	margin-bottom: 12px;
 }
 
 .formInput
 {
 	font-size: 18px;
-    padding: 8px 10px;
+    padding: 8px 5%;
     border-color: #bdc7d8;
     border-radius: 5px;
 	margin-bottom: 10px;
-    width: 377px;
+    width: 90%;
+	resize: none;
 }
 
-.button
+.select
+{
+	font-size: 18px;
+    padding: 8px 4%;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+	margin-bottom: 10px;
+    width: 100%;
+}
+
+
+option
+{
+	font-size: 14px;
+    padding: 8px 6%;
+    border-color: #bdc7d8;
+    border-radius: 5px;
+	margin-bottom: 10px;
+    width: 100%;
+	color: black;
+}
+
+button
 {
 	background-color: #0b440b;
 	color: #BBFFBB;
 	font-size: 20px;
-    padding: 8px 10px;
+    padding: 8px 10%;
     border-color: #bdc7d8;
     border-radius: 5px;
+	margin-top: 16px;
 	margin-bottom: 10px;
-    width: 400px;
-	
+    width: 100%;
 }
+
+.buttonAdd
+{
+	background-color: #0b440b;
+	width: 40%;
+	margin-right:9%;
+}
+
+.buttonCancel
+{
+	background-color: #840719;
+	width: 40%;
+	margin-left: 9%;
+}
+
+.disabledColor
+{
+	color: gray;
+}	
