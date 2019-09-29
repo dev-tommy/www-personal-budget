@@ -11,13 +11,7 @@
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	<script>
-			function setActualDate()
-			{
-				document.getElementById('defaultToday').value = new Date().toISOString().substring(0, 10);
-				document.getElementById('defaultToday').max = document.getElementById('defaultToday').value ;
-			}	
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 	
 </head>
 
@@ -33,7 +27,7 @@
 				<div>
 					<div><input type="number"  class="formInput" name="amount" placeholder="Kwota" step="0.01" maxlength="64" required></div>
 					<div>
-						<input  onreset="setActualDate();" type="date"  id="defaultToday" class="formInput" name="date" min="2000-01-01"  required>
+						<input type="date"  id="defaultToday" class="formInput" name="date" min="2000-01-01"  required>
 						
 					</div>
 					<div><select name="payment"  class="select" required>
