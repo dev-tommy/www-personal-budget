@@ -28,7 +28,7 @@ label
 
 fieldset
 {
-	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
+	background: linear-gradient(to bottom, #EEEEEE 0%, #3460a2 100%);
 	margin: auto;
 	width:150px;
 	border-color: #bdc7d8;
@@ -110,10 +110,9 @@ nav
 	border-color: #bdc7d8;
 }
 
-
 #expense
 {
-	background: linear-gradient(to bottom, #EEEEEE 0%, #063884 100%);
+	background: linear-gradient(to bottom, #EEEEEE 0%, #3460a2 100%);
 	margin: auto;
 	width:500px;
 	border-color: #bdc7d8;
@@ -164,7 +163,110 @@ nav
 	margin-left: 9%;
 }
 
-.disabledColor
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  	color: #ffffff;
+	text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #13086f;
+	border-color: #bdc7d8;
+}
+
+.incomes-fieldset
 {
-	color: gray;
+	background: linear-gradient(to bottom, #EEEEEE 0%, #3460a2 100%);
+	margin: auto;
+	width: auto;
+	border-color: #bdc7d8;
+    border-radius: 5px;
+	box-shadow: 10px 10px 9px -3px rgba(0,0,0,0.75);
+	margin-top: 0px;
 }	
+
+.expenses-fieldset
+{
+	background: linear-gradient(to bottom, #EEEEEE 0%, #3460a2 100%);
+	margin: auto;
+	width: auto;
+	border-color: #bdc7d8;
+    border-radius: 5px;
+	box-shadow: 10px 10px 9px -3px rgba(0,0,0,0.75);
+	margin-top: 0px;
+}	
+
+.table-style
+{
+	text-align: left;
+}
+
+.text-right
+{
+	text-align: right;
+}
+
+
+
+.table-caption
+{
+	font-size: 64px;
+	font-weight: 400;
+	color: #b9001a;
+	text-align: center;
+}
+
+#balance , #balanceComment
+{
+	text-align: center;
+}
+
+.flex-container {
+	margin: 50px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+    width: 800px;
+}
+
+.summary
+{
+	font-weight: 600;
+}
