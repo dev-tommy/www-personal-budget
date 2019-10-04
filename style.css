@@ -85,6 +85,14 @@ nav
 	border-right: 1px dashed #0a2b42;
 }
 
+.menu input
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	border-right: 1px dashed #0a2b42;
+	width: auto;
+}
+
 .menu > li:first-child
 {
 	border-left: 1px dashed #0a2b42;
