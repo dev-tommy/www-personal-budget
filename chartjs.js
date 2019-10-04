@@ -103,7 +103,7 @@ var chartJS = (function () {
 
         this.addLabels = function (d,ad) {
 
-            d = typeof a !== 'undefined' ? d : 0.1*this.radius;
+            d = typeof a !== 'undefined' ? d : 0.2*this.radius;
             ad = typeof b !== 'undefined' ? ad : 0;
 
             if (canvas.getContext) {
@@ -115,6 +115,7 @@ var chartJS = (function () {
                             a=(this.peacesArray[i].stAngle + this.peacesArray[i].endAngle) / 2.0;
                             a+=ad;
                             xy=degToLen(a,this.peacesArray[i].centX, this.peacesArray[i].centY, this.peacesArray[i].radius+d);
+							c.font = "bold 16px Verdana";
 							c.fillStyle = "#000000";
                             c.fillText(i,xy['x'],xy['y']);
                         }
@@ -193,19 +194,19 @@ var chartJS = (function () {
 function drawChart()
 {
             var elements = {
-                Mieszkanie: 0.457,
-                Jedzenie: 0.234,
-                Transport: 0.1142,
-				Oszczędności: 0.1063,
-				Ubranie: 0.0884
+                'Mieszkanie 46%': 0.457,
+                'Jedzenie 23%': 0.234,
+                'Transport 11%': 0.1142,
+				'Oszczędności 11%': 0.1063,
+				'Ubranie 9%': 0.0884
             };
 
             var colors = {
-                Mieszkanie: 'green',
-                Jedzenie: 'red',
-                Transport: 'blue',
-				Oszczędności: 'gray',
-				Ubranie: 'pink'
+                'Mieszkanie 46%': 'green',
+                'Jedzenie 23%': 'red',
+                'Transport 11%': 'blue',
+				'Oszczędności 11%': 'gray',
+				'Ubranie 9%': 'pink'
             };
 
             var canvas = document.getElementById('chartpie');
