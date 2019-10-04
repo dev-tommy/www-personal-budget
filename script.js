@@ -48,9 +48,6 @@ function setDate(fromInputDateId, toInputDateId, period)
 		document.getElementById("periodBalanceCaption").innerHTML="Bilans z bieżącego roku:";
 	}
 	document.getElementById('setBalanceDates').disabled = true;
-	
-	
-	
 }
 
 function enableButton()
