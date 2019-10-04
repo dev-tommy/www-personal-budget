@@ -17,7 +17,7 @@
 	
 </head>
 
-<body onload="calculateBalance(); drawChart();">
+<body onload="calculateBalance(); drawChart(); setDate('fromDateBalance', 'toDateBalance', 'currentMonth');">
 	<header>
 		<h1 class="logo">  Nowoczesny  budżet osobisty </h1>
 		<nav>
@@ -30,10 +30,16 @@
 				
 				<li class="dropdown ">Okres bilansu:
 						<div class="dropdown-content">
-							<a href="#">Bieżący miesiąc</a>						
-							<a href="#">Poprzedni miesiąc</a>
-							<a href="#">Bieżący rok</a>
-							<a href="#">Niestandardowy</a>
+							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentMonth')">Bieżący miesiąc</a>						
+							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'previousMonth')">Poprzedni miesiąc</a>
+							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</a>
+							<a href="#">
+								<div>
+									<input type="date"  id="fromDateBalance" class="input-style" name="date" min="2000-01-01"  required>
+									<input type="date"  id="toDateBalance" class="input-style" name="date" min="2000-01-01"  required>
+									<input type="button"  id="setBalanceDates" class="input-style" onclick="showBalance('fromDateBalance', 'toDateBalance')" value="Wyświetl" >
+								</div>
+							</a>
 					</div>
 				</li>
 				
@@ -42,6 +48,7 @@
 	</header>
 	
 	<main>
+		<h1 id="periodBalanceCaption">Bilans z bieżącego miesiąca:</h1>
 		<div class="flex-container">
 			<fieldset  class="incomes-fieldset">
 				<legend class="table-caption">Przychody:</legend>	
@@ -117,7 +124,7 @@
 			<div id="balanceComment"> </div>
 		</div>
 		
-		<canvas width="800" height="640"  id="chartpie">
+		<canvas width="800" height="700"  id="chartpie">
 			Sorry, canvas not supported
 		</canvas>
 		

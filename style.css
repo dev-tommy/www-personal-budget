@@ -121,7 +121,7 @@ nav
 
 #legend
 {
-	font-size: 64px;
+	font-size: 40px;
 	font-weight: 400;
 	color: #b9001a;
 	text-align: center;
@@ -247,7 +247,7 @@ nav
 
 .table-caption
 {
-	font-size: 64px;
+	font-size: 48px;
 	font-weight: 400;
 	color: #b9001a;
 	text-align: center;
@@ -273,4 +273,13 @@ canvas {
 .summary
 {
 	font-weight: 600;
+}
+
+#periodBalanceCaption
+{
+	text-align: center;
+	font-size: 48px;
+	font-weight: 600;
+	font-family: Times;
+	font-style: italic;
 }
