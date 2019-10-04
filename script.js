@@ -33,6 +33,7 @@ function setDate(fromInputDateId, toInputDateId, period)
 		document.getElementById(fromInputDateId).value = '2019-10-01';
 		document.getElementById(toInputDateId).value = '2019-10-31';
 		document.getElementById("periodBalanceCaption").innerHTML="Bilans z bieżącego miesiąca:";
+		
 	}
 	else if (period == 'previousMonth') 
 	{
@@ -46,8 +47,15 @@ function setDate(fromInputDateId, toInputDateId, period)
 		document.getElementById(toInputDateId).value = new Date().toISOString().substring(0, 10);
 		document.getElementById("periodBalanceCaption").innerHTML="Bilans z bieżącego roku:";
 	}
+	document.getElementById('setBalanceDates').disabled = true;
 	
 	
+	
+}
+
+function enableButton()
+{
+	document.getElementById('setBalanceDates').disabled = false;
 	
 }
 

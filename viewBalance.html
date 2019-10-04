@@ -35,9 +35,9 @@
 							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</a>
 							<a href="#">
 								<div>
-									<input type="date"  id="fromDateBalance" class="input-style" name="date" min="2000-01-01"  required>
-									<input type="date"  id="toDateBalance" class="input-style" name="date" min="2000-01-01"  required>
-									<input type="button"  id="setBalanceDates" class="input-style" onclick="showBalance('fromDateBalance', 'toDateBalance')" value="Wyświetl" >
+									<input type="date"  id="fromDateBalance" class="input-style" onclick="enableButton()" name="date" min="2000-01-01"  required>
+									<input type="date"  id="toDateBalance" class="input-style"  onclick="enableButton()" name="date" min="2000-01-01"  required>
+									<input type="button"  id="setBalanceDates" class="input-style" onclick="showBalance('fromDateBalance', 'toDateBalance')" value="Wyświetl"  disabled>
 								</div>
 							</a>
 					</div>
