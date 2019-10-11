@@ -5,7 +5,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Budżet osobisty - Logowanie</title>
     <meta name="description" content="Zarządzaj swoim budżetem domowym">
     <meta name="keywords" content="budżet, osobisty, domowy, oszczędzanie, bezpieczeństwo finansowe">
@@ -15,35 +14,135 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster:400" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <h1 class="logo"> Nowoczesny budżet osobisty </h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="register.html">Zarejestruj się</a></li>
-                <li class="menu-selected"><a href="#l">Zaloguj się</a></li>
-            </ul>
+        <nav class="navbar navbar-dark bg-custom navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="30" height="30"
+                    class="d-inline-block mr-1 align-bottom" alt="">
+                <span class="h2">Budżet osobisty </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
+                aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link d-none" href="#"> Dodaj przychód </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  d-none" href="#"> Dodaj wydatek </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  d-none" href="#"> Przeglądaj bilans </a>
+                    </li>
+                </ul>
+
+                <form class="form-inline" action="addExpense.html">
+                    <input class="form-control form-control mr-1 my-1" type="text" placeholder="Login">
+                    <input class="form-control form-control mr-1 my-1" type="password" placeholder="Hasło">
+                    <div class="btn-group">
+                        <button class="btn btn-warning btn-sm px-2 my-1" type="submit">
+                            <i class="material-icons">person</i>
+                        </button>
+                        <button class="btn btn-warning btn-sm pl-0 my-1" type="submit">
+                            <span class="text-button"> Zaloguj się </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </nav>
     </header>
 
     <main>
-        <form action="addExpense.html" method="post">
-            <fieldset id="login">
-                <legend id="legend">Logowanie:</legend>
-                <div>
-                    <div><input type="email" class="input-style" name="email" placeholder="Adres email" maxlength="64"
-                            required></div>
-                    <div><input type="password" class="input-style" name="password" placeholder="Hasło" minlength="8"
-                            maxlength="64" required></div>
-                    <div><button type="submit">Zaloguj się</button></div>
+        <div class="container move-under-navbar">
+            <div class="row">
+                <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <form action="/action_page.php">
+                        <div class="card shadow-lg mb-5 bg-white rounded">
+                            <div class="card-header bg-info h1 text-center"> Rejestracja </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">account_box</i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="firstName" placeholder="Imię"
+                                        maxlength="64" required>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">email</i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" name="email" placeholder="Adres email"
+                                        maxlength="64" required>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock</i>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="form-control" name="password" placeholder="Hasło"
+                                        minlength="8" maxlength="64" required>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock</i>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="form-control" name="confirmPassword"
+                                        placeholder="Potwierdź hasło" minlength="8" maxlength="64" required>
+                                </div>
+
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox">
+                                        Zapamiętaj mnie
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="card-footer bg-info text-white ">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <div class="btn-group">
+                                            <button class="btn btn-warning btn-sm px-2" type="submit">
+                                                <i class="material-icons">person_add</i>
+                                            </button>
+                                            <button class="btn btn-warning btn-sm pl-0 text-button" type="submit">
+                                                Zarejestruj się
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </fieldset>
-        </form>
+            </div>
+        </div>
     </main>
 
-
+    <footer class="footer text-center fixed-bottom mb-0 p-1 text-white bg-custom">
+        © 2019 Copyright: Tomasz Frydrychowicz
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
