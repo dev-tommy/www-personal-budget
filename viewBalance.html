@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 
 	<meta charset="utf-8">
@@ -7,128 +8,132 @@
 	<meta name="description" content="Zarządzaj swoim budżetem domowym">
 	<meta name="keywords" content="budżet, osobisty, domowy, oszczędzanie, bezpieczeństwo finansowe">
 	<meta name="author" content="Tomasz Frydrychowicz">
-	
+
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<script src="script.js"></script>
 	<script src="chartjs.js"></script>
 
-	
+
 </head>
 
 <body onload="calculateBalance(); drawChart(); setDate('fromDateBalance', 'toDateBalance', 'currentMonth');">
 	<header>
-		<h1 class="logo">  Nowoczesny  budżet osobisty </h1>
+		<h1 class="logo"> Nowoczesny budżet osobisty </h1>
 		<nav>
 			<ul class="menu">
 				<li><a href="#">Dodaj przychód</a></li>
 				<li><a href="addExpense.html">Dodaj wydatek</a></li>
-				<li  class="menu-selected" ><a href="#">Przeglądaj bilans</a></li>
+				<li class="menu-selected"><a href="#">Przeglądaj bilans</a></li>
 				<li><a href="#">Ustawienia</a></li>
 				<li><a href="login.html">Wyloguj się</a></li>
-				
+
 				<li class="dropdown ">Okres bilansu:
-						<div class="dropdown-content">
-							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentMonth')">Bieżący miesiąc</a>						
-							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'previousMonth')">Poprzedni miesiąc</a>
-							<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</a>
-								<div>
-									<input type="date"  id="fromDateBalance" class="input-style" onclick="enableButton()" name="date" min="2000-01-01"  required>
-									<input type="date"  id="toDateBalance" class="input-style"  onclick="enableButton()" name="date" min="2000-01-01"  required>
-									<input type="button"  id="setBalanceDates" class="input-style" onclick="showBalance('fromDateBalance', 'toDateBalance')" value="Wyświetl"  disabled>
-								</div>
+					<div class="dropdown-content">
+						<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentMonth')">Bieżący miesiąc</a>
+						<a onclick="setDate('fromDateBalance', 'toDateBalance', 'previousMonth')">Poprzedni miesiąc</a>
+						<a onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</a>
+						<div>
+							<input type="date" id="fromDateBalance" class="input-style" onclick="enableButton()"
+								name="date" min="2000-01-01" required>
+							<input type="date" id="toDateBalance" class="input-style" onclick="enableButton()"
+								name="date" min="2000-01-01" required>
+							<input type="button" id="setBalanceDates" class="input-style"
+								onclick="showBalance('fromDateBalance', 'toDateBalance')" value="Wyświetl" disabled>
+						</div>
 					</div>
 				</li>
-				
+
 			</ul>
 		</nav>
 	</header>
-	
+
 	<main>
 		<h1 id="periodBalanceCaption">Bilans z bieżącego miesiąca:</h1>
 		<div class="flex-container">
-			<fieldset  class="incomes-fieldset">
-				<legend class="table-caption">Przychody:</legend>	
+			<fieldset class="incomes-fieldset">
+				<legend class="table-caption">Przychody:</legend>
 				<table class="table-style">
-				   <thead>
-					  <tr>
-						 <th>Kategoria</th>
-						 <th class="table-text-right">Kwota [ zł ]</th>
-					  </tr>
-				   </thead>
-				   <tbody>
-					  <tr>
-						 <td>Wynagrodzenie</td>
-						 <td class="table-text-right">4200,00</td>
-					  </tr>
-					  <tr>
-						 <td>Odsetki bankowe</td>
-						 <td class="table-text-right">223,37</td>
-					  </tr>
-					  <tr>
-						 <td>Sprzedaż na allegro</td>
-						 <td class="table-text-right">48,00</td>
-					  </tr>
-					  <tr class="summary">
-						<td>Razem:</td>
-						<td  id="sum-of-incomes"  class="table-text-right">4471,37</td>
-					  </tr>
-				   </tbody>
+					<thead>
+						<tr>
+							<th>Kategoria</th>
+							<th class="table-text-right">Kwota [ zł ]</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Wynagrodzenie</td>
+							<td class="table-text-right">4200,00</td>
+						</tr>
+						<tr>
+							<td>Odsetki bankowe</td>
+							<td class="table-text-right">223,37</td>
+						</tr>
+						<tr>
+							<td>Sprzedaż na allegro</td>
+							<td class="table-text-right">48,00</td>
+						</tr>
+						<tr class="summary">
+							<td>Razem:</td>
+							<td id="sum-of-incomes" class="table-text-right">4471,37</td>
+						</tr>
+					</tbody>
 				</table>
 			</fieldset>
 
-			<fieldset  class="expenses-fieldset">
-				<legend class="table-caption">Wydatki:</legend>	
+			<fieldset class="expenses-fieldset">
+				<legend class="table-caption">Wydatki:</legend>
 				<table class="table-style">
-				   <thead>
-					  <tr>
-						 <th>Kategoria</th>
-						 <th class="table-text-right">Kwota  [ zł ]</th>
-					  </tr>
-				   </thead>
-				   <tbody>
+					<thead>
 						<tr>
-						 <td>Mieszkanie</td>
-						 <td class="table-text-right">620,00</td>
-					  </tr>
-					  <tr>
-						 <td>Jedzenie</td>
-						 <td class="table-text-right">317,48</td>
-					  </tr>
-					  <tr>
-						 <td>Transport</td>
-						 <td class="table-text-right">155,00</td>
-					  </tr>
-					  <tr>
-						 <td>Oszczędności</td>
-						 <td class="table-text-right">144,23</td>
-					  </tr>
-					  <tr>
-						 <td>Ubranie</td>
-						 <td class="table-text-right">120,00</td>
-					  </tr>
-					  <tr  class="summary">
-						<td>Razem:</td>
-						<td  id="sum-of-expenses" class="table-text-right">1356,71</td>
-					  </tr>
-				   </tbody>
+							<th>Kategoria</th>
+							<th class="table-text-right">Kwota [ zł ]</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Mieszkanie</td>
+							<td class="table-text-right">620,00</td>
+						</tr>
+						<tr>
+							<td>Jedzenie</td>
+							<td class="table-text-right">317,48</td>
+						</tr>
+						<tr>
+							<td>Transport</td>
+							<td class="table-text-right">155,00</td>
+						</tr>
+						<tr>
+							<td>Oszczędności</td>
+							<td class="table-text-right">144,23</td>
+						</tr>
+						<tr>
+							<td>Ubranie</td>
+							<td class="table-text-right">120,00</td>
+						</tr>
+						<tr class="summary">
+							<td>Razem:</td>
+							<td id="sum-of-expenses" class="table-text-right">1356,71</td>
+						</tr>
+					</tbody>
 				</table>
 			</fieldset>
 		</div>
-	
-		<div >
-			<h1 id="balance"> Twój bilans:  </h1>
+
+		<div>
+			<h1 id="balance"> Twój bilans: </h1>
 			<div id="balanceComment"> </div>
 		</div>
-		
-		<canvas width="800" height="700"  id="chartpie">
+
+		<canvas width="800" height="700" id="chartpie">
 			Sorry, canvas not supported
 		</canvas>
-		
+
 	</main>
 	<footer>
-		
+
 	</footer>
 </body>
+
 </html>
