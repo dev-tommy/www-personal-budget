@@ -1,3 +1,8 @@
+textarea
+{
+    resize: none;
+}
+
 .bg-custom
 {
     background-color: #187c36!important;
@@ -27,5 +32,15 @@
 
 .move-under-navbar
 {
-    margin-top: 80px;
+    margin-top: 120px;
+}
+
+.text-red
+{
+    color: red;
+}
+
+.text-green
+{
+    color: green;
 }

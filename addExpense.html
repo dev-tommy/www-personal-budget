@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
 
 	<meta charset="utf-8">
@@ -7,22 +8,22 @@
 	<meta name="description" content="Zarządzaj swoim budżetem domowym">
 	<meta name="keywords" content="budżet, osobisty, domowy, oszczędzanie, bezpieczeństwo finansowe">
 	<meta name="author" content="Tomasz Frydrychowicz">
-	
+
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<script src="script.js">
 	</script>
-	
+
 </head>
 
 <body onload="setActualDate();">
 	<header>
-		<h1 class="logo">  Nowoczesny  budżet osobisty </h1>
+		<h1 class="logo"> Nowoczesny budżet osobisty </h1>
 		<nav>
 			<ul class="menu">
 				<li><a href="#">Dodaj przychód</a></li>
-				<li class="menu-selected" ><a href="addExpense.html">Dodaj wydatek</a></li>
+				<li class="menu-selected"><a href="addExpense.html">Dodaj wydatek</a></li>
 				<li><a href="viewBalance.html">Przeglądaj bilans</a></li>
 				<li><a href="#">Ustawienia</a></li>
 				<li><a href="login.html">Wyloguj się</a></li>
@@ -30,52 +31,55 @@
 		</nav>
 	</header>
 	<main>
-		<form action="addExpense.php"  method="post" >
-			<fieldset  id="expense">
+		<form action="addExpense.php" method="post">
+			<fieldset id="expense">
 				<legend id="legend">Dodaj wydatek:</legend>
 				<div>
-					<div><input type="number"  class="input-style" name="amount" placeholder="Kwota" step="0.01" required></div>
+					<div><input type="number" class="input-style" name="amount" placeholder="Kwota" step="0.01"
+							required></div>
 					<div>
-						<input type="date"  id="defaultToday" class="input-style" name="date" min="2000-01-01"  required>
+						<input type="date" id="defaultToday" class="input-style" name="date" min="2000-01-01" required>
 					</div>
-					<div><select name="payment"  class="select-style" required>
-						<option  disabled value="" selected>Wybierz rodzaj płatności</option>
-						<option value=1>Gotówka</option>
-						<option value=2>Karta debetowa</option>
-						<option value=3>Karta kredytowa</option>
-					</select></div>
-					<div><select name="category"  class="select-style" required>
-						<option  disabled value="" selected >Wybierz kategorię</option>
-						<option value=1 >Jedzenie</option>
-						<option value=2>Mieszkanie</option>
-						<option value=3>Transport</option>
-						<option value=4>Telekomunikacja</option>
-						<option value=5>Opieka zdrowotna</option>
-						<option value=6>Ubranie</option>
-						<option value=7>Higiena</option>
-						<option value=8>Dzieci</option>
-						<option value=9>Rozrywka</option>
-						<option value=10>Wycieczka</option>
-						<option value=11>Szkolenia</option>
-						<option value=12>Książki</option>
-						<option value=13>Oszczędności</option>
-						<option value=14>Na złotą jesień, czyli emeryturę</option>
-						<option value=15>Spłata długów</option>
-						<option value=16>Darowizna</option>
-						<option value=17>Inne wydatki</option>
-					</select></div>
-				
-					<div><textarea class="input-style" name="comment" rows=4 cols=45 maxlength= 180 placeholder="Komentarz (opcjonalnie):"></textarea></div>
+					<div><select name="payment" class="select-style" required>
+							<option disabled value="" selected>Wybierz rodzaj płatności</option>
+							<option value=1>Gotówka</option>
+							<option value=2>Karta debetowa</option>
+							<option value=3>Karta kredytowa</option>
+						</select></div>
+					<div><select name="category" class="select-style" required>
+							<option disabled value="" selected>Wybierz kategorię</option>
+							<option value=1>Jedzenie</option>
+							<option value=2>Mieszkanie</option>
+							<option value=3>Transport</option>
+							<option value=4>Telekomunikacja</option>
+							<option value=5>Opieka zdrowotna</option>
+							<option value=6>Ubranie</option>
+							<option value=7>Higiena</option>
+							<option value=8>Dzieci</option>
+							<option value=9>Rozrywka</option>
+							<option value=10>Wycieczka</option>
+							<option value=11>Szkolenia</option>
+							<option value=12>Książki</option>
+							<option value=13>Oszczędności</option>
+							<option value=14>Na złotą jesień, czyli emeryturę</option>
+							<option value=15>Spłata długów</option>
+							<option value=16>Darowizna</option>
+							<option value=17>Inne wydatki</option>
+						</select></div>
+
+					<div><textarea class="input-style" name="comment" rows=4 cols=45 maxlength=180
+							placeholder="Komentarz (opcjonalnie):"></textarea></div>
 					<div>
-						<button type="submit" class="buttonAdd" >Dodaj</button>
+						<button type="submit" class="buttonAdd">Dodaj</button>
 						<button type="button" class="buttonCancel" onclick="window.location.reload();">Anuluj</button>
 					</div>
 				</div>
 			</fieldset>
-		</form>		
+		</form>
 	</main>
 	<footer>
-		
+
 	</footer>
 </body>
+
 </html>
