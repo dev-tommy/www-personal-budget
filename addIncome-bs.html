@@ -34,11 +34,11 @@
             <div class="collapse navbar-collapse pt-2" id="mainmenu">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link h3" href="addIncome-bs.html"> Dodaj przychód </a>
+                        <a class="nav-link active h3" href="#"> Dodaj przychód </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active h3" href="#"> Dodaj wydatek </a>
+                        <a class="nav-link h3" href="addExpense-bs.html"> Dodaj wydatek </a>
                     </li>
 
                     <li class="nav-item">
@@ -66,7 +66,7 @@
                 <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <form action="/action_page.php">
                         <div class="card shadow-lg mb-5 bg-white rounded">
-                            <div class="card-header bg-info h1 text-center"> Dodaj wydatek </div>
+                            <div class="card-header bg-info h1 text-center"> Dodaj przychód </div>
                             <div class="card-body">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -91,42 +91,15 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="material-icons">payment</i>
-                                        </span>
-                                    </div>
-                                    <select name="payment" class="form-control" required>
-                                        <option disabled value="" selected>Wybierz rodzaj płatności</option>
-                                        <option value=1>Gotówka</option>
-                                        <option value=2>Karta debetowa</option>
-                                        <option value=3>Karta kredytowa</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
                                             <i class="material-icons">shop</i>
                                         </span>
                                     </div>
                                     <select name="category" class="form-control" required>
                                         <option disabled value="" selected>Wybierz kategorię</option>
-                                        <option value=1>Jedzenie</option>
-                                        <option value=2>Mieszkanie</option>
-                                        <option value=3>Transport</option>
-                                        <option value=4>Telekomunikacja</option>
-                                        <option value=5>Opieka zdrowotna</option>
-                                        <option value=6>Ubranie</option>
-                                        <option value=7>Higiena</option>
-                                        <option value=8>Dzieci</option>
-                                        <option value=9>Rozrywka</option>
-                                        <option value=10>Wycieczka</option>
-                                        <option value=11>Szkolenia</option>
-                                        <option value=12>Książki</option>
-                                        <option value=13>Oszczędności</option>
-                                        <option value=14>Na złotą jesień, czyli emeryturę</option>
-                                        <option value=15>Spłata długów</option>
-                                        <option value=16>Darowizna</option>
-                                        <option value=17>Inne wydatki</option>
+                                        <option value=1>Wynagrodzenie</option>
+                                        <option value=2>Odsetki bankowe</option>
+                                        <option value=3>Sprzedaż Allegro</option>
+                                        <option value=4>Inne</option>
                                     </select>
                                 </div>
 
