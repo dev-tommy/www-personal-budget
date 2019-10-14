@@ -3,8 +3,9 @@ textarea
     resize: none;
 }
 
-canvas {
-    width: 100%;
+#chartpie {
+    width: 80%;
+    margin: auto;
     height: auto;
 }
 
