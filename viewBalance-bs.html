@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7CPoppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js"></script>
@@ -76,8 +76,9 @@
         <div class="container move-under-navbar">
             <div class="row">
                 <div class="col-md-10 offset-md-1 text-center ">
-                    <div id="periodBalanceCaption" class="card shadow p-2 sentence-period font-italic font-weight-light">
-                         Bilans z bieżącego miesiąca
+                    <div id="periodBalanceCaption"
+                        class="card shadow p-2 sentence-period font-italic font-weight-light">
+                        Bilans z bieżącego miesiąca
                     </div>
                 </div>
             </div>
@@ -103,8 +104,8 @@
                                         <td class="text-right">223,37</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="text-left"">Sprzedaż na Allegro</th>
-                                    <td class=" text-right">48,00</td>
+                                        <th scope="row" class="text-left">Sprzedaż na Allegro</th>
+                                        <td class="text-right">48,00</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -140,16 +141,16 @@
                                         <td class="text-right">317,48</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="text-left"">Transport</th>
-                                    <td class=" text-right">155,00</td>
+                                        <th scope="row" class="text-left">Transport</th>
+                                        <td class="text-right">155,00</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="text-left"">Oszczędności</th>
-                                    <td class=" text-right">144,23</td>
+                                        <th scope="row" class="text-left">Oszczędności</th>
+                                        <td class="text-right">144,23</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row" class="text-left"">Ubranie</th>
-                                    <td class=" text-right">120,00</td>
+                                        <th scope="row" class="text-left">Ubranie</th>
+                                        <td class="text-right">120,00</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -199,37 +200,41 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-</body>
-<div class="modal fade" id="periodSelectionWindow" tabindex="0" role="dialog">
-    <div class="modal-dialog  modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="periodSelectionWindowTitle">Wybierz przediał czasu:</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true" class="text-danger">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
-                    onclick="setDate('fromDateBalance', 'toDateBalance', 'currentMonth')">Bieżący miesiąc</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
-                    onclick="setDate('fromDateBalance', 'toDateBalance', 'previousMonth')">Poprzedni miesiąc</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
-                    onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</button>
-                <div>
-                    <input type="date" id="fromDateBalance" class="form-control my-2" onclick="enableButton()"
-                        name="date" min="2000-01-01" required>
-                    <input type="date" id="toDateBalance" class="form-control" onclick="enableButton()" name="date"
-                        min="2000-01-01" required>
+
+    <div class="modal fade" id="periodSelectionWindow" tabindex="0" role="dialog">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="periodSelectionWindowTitle">Wybierz przediał czasu:</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true" class="text-danger">&times;</span>
+                    </button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Anuluj</button>
-                <button type="button" class="btn btn-success" data-dismiss="modal"
-                    onclick="showBalance('fromDateBalance', 'toDateBalance')">Ustaw</button>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
+                        onclick="setDate('fromDateBalance', 'toDateBalance', 'currentMonth')">Bieżący miesiąc</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
+                        onclick="setDate('fromDateBalance', 'toDateBalance', 'previousMonth')">Poprzedni
+                        miesiąc</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"
+                        onclick="setDate('fromDateBalance', 'toDateBalance', 'currentYear')">Bieżący rok</button>
+                    <div>
+                        <input type="date" id="fromDateBalance" class="form-control my-2" onclick="enableButton()"
+                            name="date" min="2000-01-01" required>
+                        <input type="date" id="toDateBalance" class="form-control" onclick="enableButton()" name="date"
+                            min="2000-01-01" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal"
+                        onclick="showBalance('fromDateBalance', 'toDateBalance')">Ustaw</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+
 
 </html>
