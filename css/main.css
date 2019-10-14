@@ -3,6 +3,11 @@ textarea
     resize: none;
 }
 
+canvas {
+    width: 100%;
+    height: auto;
+}
+
 .bg-custom
 {
     background-color: #187c36!important;
@@ -22,10 +27,10 @@ textarea
     font-size:20px;
 }
 
-.h1
+.card-topic
 {
     font-family: "Lobster", sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: burlywood;
 
 }
@@ -33,7 +38,7 @@ textarea
 .sentence-period
 {
     font-family: "Poppins", sans-serif;
-    font-size: 48px;
+    font-size: 24px;
     color: blue;
 
 }
