@@ -115,7 +115,7 @@ var chartJS = (function () {
                             a=(this.peacesArray[i].stAngle + this.peacesArray[i].endAngle) / 2.0;
                             a+=ad;
                             xy=degToLen(a,this.peacesArray[i].centX, this.peacesArray[i].centY, this.peacesArray[i].radius+d);
-							c.font = "bold 16px Verdana";
+							c.font = "bold 24px Verdana";
 							c.fillStyle = "#000000";
                             c.fillText(i,xy['x'],xy['y']);
                         }

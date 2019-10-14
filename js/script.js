@@ -1,71 +1,58 @@
-function setActualDate()
-{
-	var today =  new Date().toISOString().substring(0, 10);
+function setActualDate() {
+	var today = new Date().toISOString().substring(0, 10);
 	document.getElementById('defaultToday').value = today;
 	document.getElementById('defaultToday').max = today;
 }
 
-function calculateBalance()
-{
-	var sumIncomes = document.getElementById("sum-of-incomes").innerText.replace(',','.');
-	var sumExpenses = document.getElementById("sum-of-expenses").innerText.replace(',','.');
-	var result="Twój bilans: " + (sumIncomes - sumExpenses).toFixed(2).replace('.',',') + " zł";
-	if (sumIncomes - sumExpenses >= 0) 
-	{
+function calculateBalance() {
+	var sumIncomes = document.getElementById("sum-of-incomes").innerText.replace(',', '.');
+	var sumExpenses = document.getElementById("sum-of-expenses").innerText.replace(',', '.');
+	var result = 'Twój bilans: ' + (sumIncomes - sumExpenses).toFixed(2).replace('.', ',') + " zł";
+	if (sumIncomes - sumExpenses >= 0) {
 		balance.style.color = "green";
-		document.getElementById("balance").innerHTML=result;
-		document.getElementById("balanceComment").innerHTML="Gratulacje. Świetnie zarządzasz finansami!";
-		
+		document.getElementById("balance").innerHTML = result;
+		document.getElementById("balanceComment").innerHTML = '<i class="material-icons" style="font-size: 50px">sentiment_very_satisfied</i> Gratulacje. Świetnie zarządzasz finansami!';
 	}
-	else if (sumIncomes - sumExpenses < 0) 
-	{
+	else if (sumIncomes - sumExpenses < 0) {
 		balance.style.color = "red";
-		document.getElementById("balance").innerHTML=result;
-		document.getElementById("balanceComment").innerHTML="Uważaj, wpadasz w długi!";
+		document.getElementById("balance").innerHTML = result;
+		document.getElementById("balanceComment").innerHTML = '<i class="material-icons" style="font-size: 50px">sentiment_dissatisfied</i> Uważaj, wpadasz w długi!';
 	}
 
 }
 
-function setDate(fromInputDateId, toInputDateId, period)
-{
-	if (period == 'currentMonth') 
-	{
+function setDate(fromInputDateId, toInputDateId, period) {
+	if (period == 'currentMonth') {
 		document.getElementById(fromInputDateId).value = '2019-10-01';
 		document.getElementById(toInputDateId).value = '2019-10-31';
-		document.getElementById("periodBalanceCaption").innerHTML="Bilans z bieżącego miesiąca:";
-		
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z bieżącego miesiąca ';
 	}
-	else if (period == 'previousMonth') 
-	{
+	else if (period == 'previousMonth') {
 		document.getElementById(fromInputDateId).value = '2019-09-01';
 		document.getElementById(toInputDateId).value = '2019-09-30';
-		document.getElementById("periodBalanceCaption").innerHTML="Bilans z poprzedniego miesiąca:";
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z poprzedniego miesiąca ';
 	}
-	else if (period == 'currentYear') 
-	{
+	else if (period == 'currentYear') {
 		document.getElementById(fromInputDateId).value = '2019-01-01';
 		document.getElementById(toInputDateId).value = new Date().toISOString().substring(0, 10);
-		document.getElementById("periodBalanceCaption").innerHTML="Bilans z bieżącego roku:";
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z bieżącego roku ';
 	}
 	document.getElementById('setBalanceDates').disabled = true;
 }
 
-function enableButton()
-{
+function enableButton() {
 	document.getElementById('setBalanceDates').disabled = false;
-	
 }
 
-function showBalance(fromInputDateId, toInputDateId)
-{
-	var title="Bilans z okresu: od ";
+function showBalance(fromInputDateId, toInputDateId) {
+	var title = 'Bilans z okresu';
+	title += '<span class="text-success"> od ';
 	title += document.getElementById(fromInputDateId).value;
-	title += " do ";
+	title += ' do ';
 	title += document.getElementById(toInputDateId).value;
-	title += " : ";
-	document.getElementById("periodBalanceCaption").innerHTML=title;
+	title += ' </span>';
+	document.getElementById("periodBalanceCaption").innerHTML = title;
 }
 
 
-	
-			
+
