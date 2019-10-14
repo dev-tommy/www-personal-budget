@@ -25,17 +25,17 @@ function setDate(fromInputDateId, toInputDateId, period) {
 	if (period == 'currentMonth') {
 		document.getElementById(fromInputDateId).value = '2019-10-01';
 		document.getElementById(toInputDateId).value = '2019-10-31';
-		document.getElementById("periodBalanceCaption").innerHTML = '<i class="material-icons">arrow_back_ios</i> Bilans z bieżącego miesiąca <i class="material-icons">arrow_forward_ios</i>';
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z bieżącego miesiąca ';
 	}
 	else if (period == 'previousMonth') {
 		document.getElementById(fromInputDateId).value = '2019-09-01';
 		document.getElementById(toInputDateId).value = '2019-09-30';
-		document.getElementById("periodBalanceCaption").innerHTML = '<i class="material-icons">arrow_back_ios</i> Bilans z poprzedniego miesiąca <i class="material-icons">arrow_forward_ios</i>';
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z poprzedniego miesiąca ';
 	}
 	else if (period == 'currentYear') {
 		document.getElementById(fromInputDateId).value = '2019-01-01';
 		document.getElementById(toInputDateId).value = new Date().toISOString().substring(0, 10);
-		document.getElementById("periodBalanceCaption").innerHTML = '<i class="material-icons">arrow_back_ios</i> Bilans z bieżącego roku <i class="material-icons">arrow_forward_ios</i>';
+		document.getElementById("periodBalanceCaption").innerHTML = ' Bilans z bieżącego roku ';
 	}
 	document.getElementById('setBalanceDates').disabled = true;
 }
@@ -45,13 +45,12 @@ function enableButton() {
 }
 
 function showBalance(fromInputDateId, toInputDateId) {
-	var title = '<i class="material-icons">arrow_back_ios</i> Bilans z okresu';
+	var title = 'Bilans z okresu';
 	title += '<span class="text-success"> od ';
 	title += document.getElementById(fromInputDateId).value;
 	title += ' do ';
 	title += document.getElementById(toInputDateId).value;
 	title += ' </span>';
-	title += '  <i class="material-icons">arrow_forward_ios</i>';
 	document.getElementById("periodBalanceCaption").innerHTML = title;
 }
 
