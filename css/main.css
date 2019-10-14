@@ -9,6 +9,10 @@ textarea
     height: auto;
 }
 
+.navbar {
+  min-height: 80px;
+}
+
 .bg-custom
 {
     background-color: #187c36!important;
