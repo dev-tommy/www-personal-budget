@@ -7,16 +7,16 @@ function setActualDate() {
 function calculateBalance() {
 	var sumIncomes = document.getElementById("sum-of-incomes").innerText.replace(',', '.');
 	var sumExpenses = document.getElementById("sum-of-expenses").innerText.replace(',', '.');
-	var result = 'Twój bilans: ' + (sumIncomes - sumExpenses).toFixed(2).replace('.', ',') + " zł";
+	var result = 'Twój bilans: <span class="h1"> ' + (sumIncomes - sumExpenses).toFixed(2).replace('.', ',') + " zł </span>";
 	if (sumIncomes - sumExpenses >= 0) {
 		balance.style.color = "green";
 		document.getElementById("balance").innerHTML = result;
-		document.getElementById("balanceComment").innerHTML = '<i class="material-icons" style="font-size: 50px">sentiment_very_satisfied</i> Gratulacje. Świetnie zarządzasz finansami!';
+		document.getElementById("balanceComment").innerHTML = '<div><i class="material-icons" style="font-size: 50px">sentiment_very_satisfied</i></div> Gratulacje. Świetnie zarządzasz finansami!';
 	}
 	else if (sumIncomes - sumExpenses < 0) {
 		balance.style.color = "red";
 		document.getElementById("balance").innerHTML = result;
-		document.getElementById("balanceComment").innerHTML = '<i class="material-icons" style="font-size: 50px">sentiment_dissatisfied</i> Uważaj, wpadasz w długi!';
+		document.getElementById("balanceComment").innerHTML = '<div><i class="material-icons" style="font-size: 50px">sentiment_dissatisfied</i></div> Uważaj, wpadasz w długi!';
 	}
 
 }
